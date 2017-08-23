@@ -1,7 +1,10 @@
 <?php  
 	class Pages extends Controller{
+		private $cotacao;
+
 		public function __construct($requestData, $templateSystem){
 			parent::__construct($requestData, $templateSystem);
+			$this->cotacao = new Cotacao();
 		}
 
 		public function isAuthorized($method, $user){
@@ -11,6 +14,7 @@
 		}
 
 		public function home(){
+			debug($this->cotacao->getConnection());
 			$this->setTitle("Welcome");
 		}
 	}

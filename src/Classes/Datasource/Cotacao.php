@@ -1,6 +1,6 @@
 <?php  
-	class ConnectionExample extends Connection{
-		static $dsn = 'firebird:dbname=localhost:/BD/DBNAME.FDB; charset=utf8';
+	class Cotacao extends Connection{
+		static $dsn = 'firebird:dbname=localhost:/BD/SRICOTACAO.FDB; charset=utf8';
 		static $user = 'SYSDBA';
 		static $password = 'masterkey';
 		
