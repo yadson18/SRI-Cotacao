@@ -201,7 +201,7 @@
         $controller = ucfirst($controller)."Controller";
         if(is_null($method) || $method == ""){
           if($controller === "Controller"){
-            $controller = $this->defaultTemplate['controller'];
+            $controller = "{$this->defaultTemplate['controller']}Controller";
             $method = $this->defaultTemplate['view'];
           }
           else{

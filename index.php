@@ -5,8 +5,8 @@
 	
 	$templateSystem = TemplateSystem::getInstance();
 	$templateSystem->setDefaultTemplate([
-		"controller" => "Pages",
+		"controller" => "Sri",
 		"view" => "home"
 	]);
-	$templateSystem->loadTemplate("/Pages/home");
+	$templateSystem->loadTemplate("/Sri/home");
 ?>
