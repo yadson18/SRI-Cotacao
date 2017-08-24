@@ -4,7 +4,7 @@
 
 		public function __construct($requestData, $templateSystem){
 			parent::__construct($requestData, $templateSystem);
-			$this->baseCotacao = new DatabaseConnect(database("firebird", "cotacao"));
+			$this->baseCotacao = new DatabaseConnect(getDatabaseConfig("firebird", "cotacao"));
 		}
 
 		public function isAuthorized($method, $user){
@@ -14,7 +14,8 @@
 		}
 
 		public function home(){
-			debug($this->baseCotacao->select("*", "COTACAO"));
+			//Webservice::getInstance();
+			//debug($this->baseCotacao->select("*", "COTACAO"));
 			$this->setTitle("Welcome");
 		}
 	}
