@@ -5,13 +5,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?= $this->css("bootstrap.min.css") ?>
-		<?= $this->css("default.css") ?>
 		<?= $this->css("font-awesome.min.css") ?>
-		<?= $this->css("navs-style.css") ?>
+		<?= $this->less("mixin.less") ?>
+		<?php if($this->getTitle() === "Home"): ?>
+			<?= $this->less("home-style.less") ?>
+		<?php else: ?>
+			<?= $this->less("pages-style.less") ?>
+		<?php endif; ?>
 
 		<?= $this->script("jquery.min.js") ?>
 		<?= $this->script("bootstrap.min.js") ?>
 		<?= $this->script("HtmlMaker.js") ?>
+		<?= $this->script("pages-scripts.js") ?>
+		<?= $this->script("less.min.js") ?>
 	</head>
 	<body>	
 		<?php if($this->getTitle() !== "Home"): ?>

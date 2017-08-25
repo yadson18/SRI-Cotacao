@@ -10,57 +10,84 @@
 		</div>
 		<div class="collapse navbar-collapse" id="responsive-menu">
 		   	<ul class="nav navbar-nav navbar-right hidden-xs">
-		   		<li><a href="#" data-toggle="modal" data-target=".modal-login">Faça o Login</a></li>
+		   		<li><a href="#" data-toggle="modal" data-target="#user-modal" class="link-login">Faça o Login</a></li>
 		   		<p class="navbar-text">ou</p>
-		   		<li><a href="#" data-toggle="modal" data-target=".modal-login">Registre-se</a></li>
+		   		<li><a href="#" data-toggle="modal" data-target="#user-modal" class="link-register">Registre-se</a></li>
 		  	</ul>
 		  	<ul class="nav navbar-nav navbar-right visible-xs">
 		   		<li>
-		   			<a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+		   			<a href="#" data-toggle="modal" data-target="#user-modal" class="link-login">
+		   				<i class="fa fa-sign-in" aria-hidden="true"></i> Login
+		   			</a>
 		   		</li>
 		   		<li>
-		   			<a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Registre-se</a>
+		   			<a href="#" data-toggle="modal" data-target="#user-modal" class="link-register">
+		   				<i class="fa fa-user-plus" aria-hidden="true"></i> Registre-se
+		   			</a>
 		   		</li>
 		  	</ul>
 		</div>
 	</div>
 </nav>
-<div class="modal fade modal-login col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-	<div style="padding: 0 10px">
-		<div class="modal-box" role="document">
-			<div class="modal-content">
-				<div>
-					<?= $this->flashShowMessage() ?>
-				</div>
-				<form method="POST" action="/User/login">
-					<div class="user-icon">
-						<i class="fa fa-user-circle" aria-hidden="true"></i>
-					</div>
+<div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="col-md-4 col-md-offset-4 modal-box" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<i class="fa fa-times close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+        		<h4 class="modal-title" id="myModalLabel"></h4>
+      		</div>
+      		<div class="modal-body">
+        		<form id="login-form">
+        			<div class="message-box"></div>
 					<div class="form-group">
-						<label>Usuário</label>
+						<label>Digite seu usuário</label>
 						<input type="text" name="login" class="form-control" placeholder="Ex: marcos" required>
 					</div>
 					<div class="form-group">
-						<label>Senha</label>
+						<label>Digite sua senha</label>
 					    <input type="password" name="senha" class="form-control" placeholder="Ex: ******" required>
 					</div>
 					<div class="form-group">
-					    <button type="submit" class="btn btn-default form-control btn-success input-lg">
+					</div>
+	      			<div class="modal-footer row">
+					    <button type="button" class="btn btn-default form-control btn-success input-lg">
 					    	Entrar <i class="fa fa-sign-in" aria-hidden="true"></i>
 						</button>
+	      			</div>
+				</form>
+				<form id="register-form">
+        			<div class="message-box"></div>
+					<div class="form-group">
+						<label>Nome de usuário</label>
+						<input type="text" name="userName" class="form-control" placeholder="Ex: marcos" required>
 					</div>
+					<div class="form-group">
+						<label>Crie uma senha</label>
+					    <input type="password" class="form-control" placeholder="Ex: ******" required>
+					</div>
+					<div class="form-group">
+						<label>Confirmar senha</label>
+					    <input type="password" name="password" class="form-control" placeholder="Ex: ******" required>
+					</div>
+					<div class="form-group">
+					</div>
+	      			<div class="modal-footer row">
+					    <button type="button" class="btn btn-default form-control btn-success input-lg">
+					    	Registrar-se <i class="fa fa-sign-in" aria-hidden="true"></i>
+						</button>
+	      			</div>
 				</form>
 				<div>
 					<p>&copy; SRI Automação</p>
 				</div>
-			</div>
-		</div>
-	</div>
+      		</div>
+    	</div>
+  	</div>
 </div>
 <div id="home-container" class="col-md-12">
 	<div class="row banner">
 		<h1 class="banner-title">Frase de exibição</h1>
-		<img src="/images/notebook.png" class="banner-image" style="width: 40%">
+		<img src="/images/notebook.png" class="banner-image">
 	</div>
 	<div class="features">
 		<div class="row">
