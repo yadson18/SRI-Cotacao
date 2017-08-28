@@ -34,7 +34,12 @@
     	<div class="modal-content">
       		<div class="modal-header">
         		<i class="fa fa-times close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
-        		<h4 class="modal-title" id="myModalLabel"></h4>
+	    		<div id="breadcrumb">
+					<ul class="nav nav-tabs">
+					  <li role="breadcrumb-item" id="change-form-login" class="link-login"><a>Login</a></li>
+					  <li role="breadcrumb-item" id="change-form-register" class="link-register"><a>Registro</a></li>
+					</ul>
+				</div>
       		</div>
       		<div class="modal-body">
         		<form id="login-form">
@@ -50,7 +55,7 @@
 					<div class="form-group">
 					</div>
 	      			<div class="modal-footer row">
-					    <button type="button" class="btn btn-default form-control btn-success input-lg">
+					    <button id="button-login" type="button" class="btn form-control btn-success input-lg">
 					    	Entrar <i class="fa fa-sign-in" aria-hidden="true"></i>
 						</button>
 	      			</div>
@@ -72,7 +77,7 @@
 					<div class="form-group">
 					</div>
 	      			<div class="modal-footer row">
-					    <button type="button" class="btn btn-default form-control btn-success input-lg">
+					    <button type="button" class="btn form-control btn-success input-lg">
 					    	Registrar-se <i class="fa fa-sign-in" aria-hidden="true"></i>
 						</button>
 	      			</div>
@@ -86,10 +91,11 @@
 </div>
 <div id="home-container" class="col-md-12">
 	<div class="row banner">
-		<h1 class="banner-title">Frase de exibição</h1>
+		<h1 class="banner-title">Sistema de Cotação Sri</h1>
 		<img src="/images/notebook.png" class="banner-image">
 	</div>
 	<div class="features">
+		<h1 class="features-title">Funcionalidades</h1>
 		<div class="row">
   			<div class="col-sm-6 col-md-4">
     			<div class="thumbnail">

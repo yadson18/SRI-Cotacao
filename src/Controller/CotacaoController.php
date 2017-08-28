@@ -14,9 +14,11 @@
 		}
 
 		public function home(){
-			//Webservice::getInstance();
-			//debug($this->baseCotacao->select("*", "COTACAO"));
-			$this->setTitle("Welcome");
+			$this->setTitle("Home");
+			$this->setViewVars([
+				"cotacao" => $this->baseCotacao->select("*", "COTACAO"),
+				"ws" => Webservice::getInstance()
+			]);
 		}
 	}
 ?>

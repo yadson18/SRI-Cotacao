@@ -5,13 +5,13 @@
 		}
 
 		public function isAuthorized($method, $user){
-			$allowedMethods = ["home"];
+			$allowedMethods = ["index"];
 
 			return $this->authorizedToAccess($method, $allowedMethods, $user);
 		}
 
-		public function home(){
-			$this->setTitle("Home");
+		public function index(){
+			$this->setTitle("Início");
 		}
 	}
 ?>

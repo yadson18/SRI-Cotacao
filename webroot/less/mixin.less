@@ -27,6 +27,12 @@
     transform: @transform;
 }
 
+.border-radius(@radius){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
 .width(@width){
     -webkit-width: @width;
     -moz-width: @width;
@@ -38,6 +44,18 @@
     -moz-background-color: @color;
     -o-background-color: @color;
     background-color: @color;
+}
+.border-color(@color){
+    -webkit-border-color: @color;
+    -moz-border-color: @color;
+    -o-border-color: @color;
+    border-color: @color;
+}
+.border(@border){
+    -webkit-border: @border;
+    -moz-border: @border;
+    -o-border: @border;
+    border: @border;
 }
 .box-shadow(@attributes: 0 0 5px 0 black){
 	-webkit-box-shadow: @attributes;
