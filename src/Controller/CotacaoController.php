@@ -16,8 +16,7 @@
 		public function home(){
 			$this->setTitle("Home");
 			$this->setViewVars([
-				"cotacao" => $this->baseCotacao->select("*", "COTACAO"),
-				"ws" => Webservice::getInstance()
+				"cotacoes" => $this->baseCotacao->select("*", "COTACAO")
 			]);
 		}
 	}

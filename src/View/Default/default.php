@@ -34,10 +34,17 @@
 					</div>
 					<div class="collapse navbar-collapse" id="responsive-menu">
 					   	<ul class="nav navbar-nav navbar-right">
-					   		<li>
-					   			<a href="/User/logout">
-					   				Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+					   		<li class="text-capitalize">
+					   			<a href="" class="dropdown-toggle" type="button" data-toggle="dropdown">
+					   				<?= mb_strtolower($this->getLoggedUser("NOME"), "UTF-8") ?> <span class="caret"></span>
 					   			</a>
+								<ul class="dropdown-menu">
+								   	<li>
+								   		<a href="/User/logout">
+					   						Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+					   					</a>
+					   				</li>
+								</ul>
 					   		</li>
 					  	</ul>
 					</div>

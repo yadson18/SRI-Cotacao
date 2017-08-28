@@ -85,7 +85,7 @@ $(document).ready(function(){
 							
 							if(data){
 								$(config["loginButton"]).removeAttr("disabled");
-
+								
 								if(config["method"] === "login"){
 									if(data["loginSuccess"] === true){
 										window.location.href = data["redirectTo"];
