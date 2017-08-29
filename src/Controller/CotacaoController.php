@@ -8,7 +8,7 @@
 		}
 
 		public function isAuthorized($method, $user){
-			$allowedMethods = ["home"];
+			$allowedMethods = [];
 
 			return $this->authorizedToAccess($method, $allowedMethods, $user);
 		}

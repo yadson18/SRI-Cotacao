@@ -19,6 +19,102 @@
 		<?php endif; ?>
 
 		<?= $this->script("less.min.js") ?>
+		<script type="text/javascript">
+			// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+			$(window).on("load resize ", function() {
+			  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+			  $('.tbl-header').css({'padding-right':scrollWidth});
+			}).resize();
+		</script>
+		<style type="text/css">
+section{
+	min-width: 400px;
+}		
+h1{
+  font-size: 30px;
+  color: #aaa;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin: 75px 0 15px 0;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: #58a;
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid #ddd;
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #333;
+  border-bottom: solid 1px #ccc;
+}
+
+
+/* demo styles */
+
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+		</style>
 	</head>
 	<body>	
 		<?php if($this->getTitle() !== "Início"): ?>
